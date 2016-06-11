@@ -1,0 +1,1 @@
+web: gunicorn djangoGeojsonProject.wsgi --log-file -
