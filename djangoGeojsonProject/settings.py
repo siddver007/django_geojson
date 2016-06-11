@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'djangoGeojsonProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6kfjgk9o5j9rd',
-        'USER': 'ianxnpwwzdlayg',
-        'PASSWORD': 'z7iXZaSwQjhICCX1WRDJRdtNSy',
-        'HOST': 'ec2-54-243-207-190.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': 'dbname',
+        'USER': 'db_user_name',
+        'PASSWORD': 'db_user_password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
