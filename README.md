@@ -13,21 +13,25 @@ NOTE: For Linux(ubuntu distros only)-- Tested on ElementaryOS
 3. Install pip.
 
 4. Install Virtual Environment( For your own benefit -- to prevent installing python packages globally )
+
 		$ pip install virtualenv
 
 5. Create a virtual environment( Make it somewhere near the downloaded folder for your own benefit)
+
 		$ virtualenv myvenv
 
 		--The above Terminal command initializes a virtual environment( Folder ) with name 'myvenv'
 		--You can give any name
 
 6. Enter virtual environment
+
 		$ source PATH-TO-VIRTUAL-ENVIRONMENT/myvenv/bin/activate
 
 		--Now the command shell would look like
 			(myvenv) $
 
 7. Install all the Project Dependencies inside virtual environment
+
 		(myvenv) $ pip install -r requirements.txt
 
 		--This file is inside the downloaded Project folder so either get inside the Downloaded project folder or
@@ -36,6 +40,7 @@ NOTE: For Linux(ubuntu distros only)-- Tested on ElementaryOS
 8. Get inside the Extracted Folder(Where "manage.py" is located)
 
 9. Start Django project by firing up the Django Server
+
 		(myvenv) $ ./manage.py runserver 0.0.0.0:8000
 
 		--Now Django app is running on http://localhost:8000
