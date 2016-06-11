@@ -94,26 +94,26 @@ B. APIs for Region/ GeoJson-Polygons
                [100.0, 1.0], [100.0, 0.0] ]
              ]
          },
-    "properties": {
+    		"properties": {
            "name": "California"
            }
            }
            }' "http://localhost:8000/region/add/"
 
 		FOR HEROKU cURL -- curl -X POST  -H "Content-Type: application/json" -d '  {
-  "email": "alexmercer@xyz.com",
-  "pass": "test123",
-  "price": "100",
-  "geodata":{
-  "type": "Feature",
-  "geometry": {
+  		"email": "alexmercer@xyz.com",
+  		"pass": "test123",
+  		"price": "100",
+  		"geodata":{
+  		"type": "Feature",
+  		"geometry": {
            "type": "Polygon",
            "coordinates": [
              [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0],
                [100.0, 1.0], [100.0, 0.0] ]
              ]
          },
-    "properties": {
+    		"properties": {
            "name": "California"
            }
            }
@@ -130,40 +130,40 @@ B. APIs for Region/ GeoJson-Polygons
 3. Updating a polygon for the provided user email, password and unique ID for that polygon. The unique ID can be found out    by running the get command as specified in point "2." above.
 
 		FOR LOCALHOST cURL -- curl -X PUT  -H "Content-Type: application/json" -d '  {
-  "id":5,
-  "email": "alexmercer@xyz.com",
-  "pass": "test123",
-  "price": "120",
-  "geodata":{
-  "type": "Feature",
-  "geometry": {
+  		"id":5,
+  		"email": "alexmercer@xyz.com",
+  		"pass": "test123",
+  		"price": "120",
+  		"geodata":{
+  		"type": "Feature",
+  		"geometry": {
            "type": "Polygon",
            "coordinates": [
              [ [100.0, 0.0], [102.0, 0.0], [101.0, 1.0],
                [100.0, 1.0], [100.0, 0.0] ]
              ]
          },
-    "properties": {
+    		"properties": {
            "name": "West California"
            }
            }
            }' "http://localhost:8000/region/update/"
 
 		FOR HEROKU cURL -- curl -X PUT  -H "Content-Type: application/json" -d '  {
-  "id":5,
-  "email": "alexmercer@xyz.com",
-  "pass": "test123",
-  "price": "120",
-  "geodata":{
-  "type": "Feature",
-  "geometry": {
+  		"id":5,
+  		"email": "alexmercer@xyz.com",
+  		"pass": "test123",
+  		"price": "120",
+  		"geodata":{
+  		"type": "Feature",
+  		"geometry": {
            "type": "Polygon",
            "coordinates": [
              [ [100.0, 0.0], [102.0, 0.0], [101.0, 1.0],
                [100.0, 1.0], [100.0, 0.0] ]
              ]
          },
-    "properties": {
+    		"properties": {
            "name": "West California"
            }
            }
