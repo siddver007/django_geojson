@@ -46,8 +46,10 @@ NOTE: For Linux(ubuntu distros only)-- Tested on ElementaryOS
 
 NOTE: Sessions have not been implemented so APIs(wherever required) would use hardcoded login details i.e. User-email and Password for Authentication and Authorization purposes. 
 
-A. APIs for User/Service-Provider 
+A. APIs for User/Service-Provider
+
 1. Creating a User/Service-Provider
+
 		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X POST -d '{"name":"alex","email":"alex@xyz.com","phone":"23134355","lang":"FR","curr":"EUR","pass":"test123"}' http://localhost:8000/provider/create/
 
 		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X POST -d '{"name":"alex","email":"alex@xyz.com","phone":"23134355","lang":"FR","curr":"EUR","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/create/
@@ -55,16 +57,19 @@ A. APIs for User/Service-Provider
 		--This creates a user/service-provider alex with email: alex@xyz.com, password: test123 and other details as specified.
 
 2. Getting the user data by passing user email and password.
+
 		FOR LOCALHOST cURL -- curl -X "GET" "http://localhost:8000/provider/get/?email=alex@xyz.com&pass=test123"
 
 		FOR HEROKU cURL -- curl -X "GET" "http://geojsonmozio.herokuapp.com/provider/get/?email=alex@xyz.com&pass=test123"
 
 3. Updating user data by passing user email and password along with the data changes.
+
 		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alexmercer@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://localhost:8000/provider/update/
 
 		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alexmercer@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/update/
 
 4. Deleting user data along with user created regions/ polygons by passing user email and password.
+
 		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/provider/delete/?email=alexmercer@xyz.com&pass=test123"	
 
 		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/provider/delete/?email=alexmercer@xyz.com&pass=test123"
