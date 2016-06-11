@@ -75,17 +75,19 @@ A. APIs for User/Service-Provider
 		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/provider/delete/?email=alexmercer@xyz.com&pass=test123"
 
 
+
+
 B. APIs for Region/ GeoJson-Polygons
 
 1. Creating a Polygon for a given user by passing user email and password.
 
 		FOR LOCALHOST cURL -- curl -X POST  -H "Content-Type: application/json" -d '  {
-  "email": "alexmercer@xyz.com",
-  "pass": "test123",
-  "price": "100",
-  "geodata":{
-  "type": "Feature",
-  "geometry": {
+  		"email": "alexmercer@xyz.com",
+  		"pass": "test123",
+  		"price": "100",
+  		"geodata":{
+  		"type": "Feature",
+  		"geometry": {
            "type": "Polygon",
            "coordinates": [
              [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0],
