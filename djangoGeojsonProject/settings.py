@@ -76,16 +76,16 @@ WSGI_APPLICATION = 'djangoGeojsonProject.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 ## DB Connection Params. for Localhost
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'mozio',
-#         'USER': 'mozadmin',
-#         'PASSWORD': 'moz123',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mozio',
+        'USER': 'mozadmin',
+        'PASSWORD': 'moz123',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 ## DB Connection Params. for Heroku
 import dj_database_url
