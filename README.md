@@ -44,26 +44,27 @@ NOTE: For Linux(ubuntu distros only)-- Tested on ElementaryOS
 
 ---------------------------------------------------HOW TO USE/ API Docs--------------------------------------------------------------
 
-1. Creating a request
-		GO TO URL -- "http://localhost:8000/api/request?connId=YOUR_WISH&timeOut=YOUR_WISH"
+NOTE: Sessions have not been implemented so APIs(wherever required) would use hardcoded login details i.e. User-email and Password for Authentication and Authorization purposes. 
 
-		--timeOut is in seconds.
-		--The request is running in the background. You can see it executing in the Celery Terminal
-		--The request here is doing very basic job. It is only to show that it is working. You can create any desired			   task by changing the task in "tasks.py" file.
-		--You can see all the active/running requests by follwing the next step.
+A. APIs for User/Service-Provider 
+1. Creating a User/Service-Provider
+		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X POST -d '{"name":"alex","email":"alex@xyz.com","phone":"23134355","lang":"FR","curr":"EUR","pass":"test123"}' http://localhost:8000/provider/create/
 
-2. Getting and checking all running requests
-		GO TO URL -- "http://localhost:8000/api/active"
+		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X POST -d '{"name":"alex","email":"alex@xyz.com","phone":"23134355","lang":"FR","curr":"EUR","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/create/
 
-3. To see the Server Status
-		GO TO URL -- "http://localhost:8000/api/serverStatus"
+		--This creates a user/service-provider alex with email: alex@xyz.com, password: test123 and other details as specified.
 
-4. To kill a request
-		GO TO URL -- "http://localhost:8000/api/kill/"
-		
-		and execute a PUT request on it with a payload/data {"connId" : "YOUR_WISH"}
+2. Getting the user data by passing user email and password.
+		FOR LOCALHOST cURL -- curl -X "GET" "http://localhost:8000/provider/get/?email=alex@xyz.com&pass=test123"
 
+		FOR HEROKU cURL -- curl -X "GET" "http://geojsonmozio.herokuapp.com/provider/get/?email=alex@xyz.com&pass=test123"
 
-		--for your own convenience I have given a second option to kill the request
-		--You can also simply kill a request by running a GET call on -- http://localhost:8000/api/kill?connId=YOUR_WISH
-		so that don't have to use any Third party Software/Plugin/Extension to kill a task. 
+3. Updating user data by passing user email and password along with the data changes.
+		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alexmercer@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://localhost:8000/provider/update/
+
+		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alexmercer@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/update/
+
+4. Deleting user data along with user created regions/ polygons by passing user email and password.
+		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/provider/delete/?email=alexmercer@xyz.com&pass=test123"	
+
+		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/provider/delete/?email=alexmercer@xyz.com&pass=test123"
