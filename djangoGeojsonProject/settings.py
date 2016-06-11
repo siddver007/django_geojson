@@ -79,17 +79,13 @@ WSGI_APPLICATION = 'djangoGeojsonProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mozio',
-        'USER': 'mozadmin',
-        'PASSWORD': 'moz123',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd6kfjgk9o5j9rd',
+        'USER': 'ianxnpwwzdlayg',
+        'PASSWORD': 'z7iXZaSwQjhICCX1WRDJRdtNSy',
+        'HOST': 'ec2-54-243-207-190.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
-## DB Connection Params. for Heroku
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
 
 
 # Internationalization
