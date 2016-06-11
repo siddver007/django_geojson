@@ -39,7 +39,15 @@ NOTE: For Linux(ubuntu distros only)-- Tested on ElementaryOS
 
 8. Get inside the Extracted Folder(Where "manage.py" is located)
 
-9. Start Django project by firing up the Django Server
+9. Setup a postgreSQL database and a postgreSQL user. You can follow the link:-
+
+		https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+
+10. Add Database connection parameters created above in settings.py file and then run the follwing command to migrate the      models to the database:-
+ 
+		(myvenv) $ ./manage.py migrate
+
+11. Start Django project by firing up the Django Server
 
 		(myvenv) $ ./manage.py runserver 0.0.0.0:8000
 
