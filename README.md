@@ -100,6 +100,9 @@ B. APIs for Region/ GeoJson-Polygons
            }
            }' "http://localhost:8000/region/add/"
 
+
+
+
 		FOR HEROKU cURL -- curl -X POST  -H "Content-Type: application/json" -d '  {
   		"email": "alexmercer@xyz.com",
   		"pass": "test123",
@@ -148,6 +151,9 @@ B. APIs for Region/ GeoJson-Polygons
            }
            }
            }' "http://localhost:8000/region/update/"
+
+
+
 
 		FOR HEROKU cURL -- curl -X PUT  -H "Content-Type: application/json" -d '  {
   		"id":5,
