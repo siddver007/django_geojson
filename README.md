@@ -77,15 +77,15 @@ A. APIs for User/Service-Provider
 
 3. Updating user data by passing user email and password along with the data changes.
 
-		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alexmercer@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://localhost:8000/provider/update/
+		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alex@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://localhost:8000/provider/update/
 
-		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alexmercer@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/update/
+		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alex@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/update/
 
 4. Deleting user data along with user created regions/ polygons by passing user email and password.
 
-		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/provider/delete/?email=alexmercer@xyz.com&pass=test123"	
+		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/provider/delete/?email=alex@xyz.com&pass=test123"	
 
-		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/provider/delete/?email=alexmercer@xyz.com&pass=test123"
+		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/provider/delete/?email=alex@xyz.com&pass=test123"
 
 
 
@@ -95,7 +95,7 @@ B. APIs for Region/ GeoJson-Polygons
 1. Creating a Polygon for a given user by passing user email and password.
 
 		FOR LOCALHOST cURL -- curl -X POST  -H "Content-Type: application/json" -d '  {
-  		"email": "alexmercer@xyz.com",
+  		"email": "alex@xyz.com",
   		"pass": "test123",
   		"price": "100",
   		"geodata":{
@@ -117,7 +117,7 @@ B. APIs for Region/ GeoJson-Polygons
 
 
 		FOR HEROKU cURL -- curl -X POST  -H "Content-Type: application/json" -d '  {
-  		"email": "alexmercer@xyz.com",
+  		"email": "alex@xyz.com",
   		"pass": "test123",
   		"price": "100",
   		"geodata":{
@@ -147,7 +147,7 @@ B. APIs for Region/ GeoJson-Polygons
 
 		FOR LOCALHOST cURL -- curl -X PUT  -H "Content-Type: application/json" -d '  {
   		"id":5,
-  		"email": "alexmercer@xyz.com",
+  		"email": "alex@xyz.com",
   		"pass": "test123",
   		"price": "120",
   		"geodata":{
@@ -170,7 +170,7 @@ B. APIs for Region/ GeoJson-Polygons
 
 		FOR HEROKU cURL -- curl -X PUT  -H "Content-Type: application/json" -d '  {
   		"id":5,
-  		"email": "alexmercer@xyz.com",
+  		"email": "alex@xyz.com",
   		"pass": "test123",
   		"price": "120",
   		"geodata":{
@@ -190,8 +190,8 @@ B. APIs for Region/ GeoJson-Polygons
 
 4. Deleting a polygon passing user email, password and Unique ID for the polygon.
 
-		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/region/delete/?email=alexmercer@xyz.com&pass=test123&id=5"	
+		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/region/delete/?email=alex@xyz.com&pass=test123&id=5"	
 
-		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/region/delete/?email=alexmercer@xyz.com&pass=test123&id=5"
+		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/region/delete/?email=alex@xyz.com&pass=test123&id=5"
 
 	
