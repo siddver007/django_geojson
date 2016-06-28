@@ -65,7 +65,6 @@ A. APIs for User/Service-Provider
 
 		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X POST -d '{"name":"alex","email":"alex@xyz.com","phone":"23134355","lang":"FR","curr":"EUR","pass":"test123"}' http://localhost:8000/provider/create/
 
-		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X POST -d '{"name":"alex","email":"alex@xyz.com","phone":"23134355","lang":"FR","curr":"EUR","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/create/
 
 		--This creates a user/service-provider alex with email: alex@xyz.com, password: test123 and other details as specified.
 
@@ -73,19 +72,16 @@ A. APIs for User/Service-Provider
 
 		FOR LOCALHOST cURL -- curl -X "GET" "http://localhost:8000/provider/get/?email=alex@xyz.com&pass=test123"
 
-		FOR HEROKU cURL -- curl -X "GET" "http://geojsonmozio.herokuapp.com/provider/get/?email=alex@xyz.com&pass=test123"
 
 3. Updating user data by passing user email and password along with the data changes.
 
 		FOR LOCALHOST cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alex@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://localhost:8000/provider/update/
 
-		FOR HEROKU cURL -- curl -H "Content-Type: application/json" -X PUT -d '{"name":"alex mercer","email":"alex@xyz.com","phone":"11111111","lang":"US","pass":"test123"}' http://geojsonmozio.herokuapp.com/provider/update/
 
 4. Deleting user data along with user created regions/ polygons by passing user email and password.
 
 		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/provider/delete/?email=alex@xyz.com&pass=test123"	
 
-		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/provider/delete/?email=alex@xyz.com&pass=test123"
 
 
 
@@ -116,24 +112,6 @@ B. APIs for Region/ GeoJson-Polygons
 
 
 
-		FOR HEROKU cURL -- curl -X POST  -H "Content-Type: application/json" -d '  {
-  		"email": "alex@xyz.com",
-  		"pass": "test123",
-  		"price": "100",
-  		"geodata":{
-  		"type": "Feature",
-  		"geometry": {
-           "type": "Polygon",
-           "coordinates": [
-             [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0],
-               [100.0, 1.0], [100.0, 0.0] ]
-             ]
-         },
-    		"properties": {
-           "name": "California"
-           }
-           }
-           }' "http://geojsonmozio.herokuapp.com/region/add/"
 
 		--This creates a region/geoJson-polygon California with the provided coordinates for user with email: alex@xyz.com, password: test123.
 
@@ -141,7 +119,6 @@ B. APIs for Region/ GeoJson-Polygons
 
 		FOR LOCALHOST cURL -- curl -X "GET" "http://localhost:8000/region/get/?lat=100.5&lng=0.5"
 
-		FOR HEROKU cURL -- curl -X "GET" "http://geojsonmozio.herokuapp.com/region/get/?lat=100.5&lng=0.5"
 
 3. Updating a polygon for the provided user email, password and unique ID for that polygon. The unique ID can be found out    by running the get command as specified in point "2." above.
 
@@ -168,30 +145,10 @@ B. APIs for Region/ GeoJson-Polygons
 
 
 
-		FOR HEROKU cURL -- curl -X PUT  -H "Content-Type: application/json" -d '  {
-  		"id":5,
-  		"email": "alex@xyz.com",
-  		"pass": "test123",
-  		"price": "120",
-  		"geodata":{
-  		"type": "Feature",
-  		"geometry": {
-           "type": "Polygon",
-           "coordinates": [
-             [ [100.0, 0.0], [102.0, 0.0], [101.0, 1.0],
-               [100.0, 1.0], [100.0, 0.0] ]
-             ]
-         },
-    		"properties": {
-           "name": "West California"
-           }
-           }
-           }' "http://geojsonmozio.herokuapp.com/region/update/"
 
 4. Deleting a polygon passing user email, password and Unique ID for the polygon.
 
 		FOR LOCALHOST cURL -- curl -X "DELETE" "http://localhost:8000/region/delete/?email=alex@xyz.com&pass=test123&id=5"	
 
-		FOR HEROKU cURL -- curl -X "DELETE" "http://geojsonmozio.herokuapp.com/region/delete/?email=alex@xyz.com&pass=test123&id=5"
 
 	
