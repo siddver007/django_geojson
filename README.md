@@ -1,8 +1,8 @@
 # django_geojson
-django_geojson  This is a django application which shows you the use of GeoJson data with django from scratch without the use of any third party geojson-libraries. This app has API endpoints for users and API endpoints for the regions/ polygons created by users. User API endpoints let's you create a user(Http-POST-Request), retrieve user details(Http-GET-Request), update/modify user details(Http-PUT-Request), delete user data along with the geojson regions/polygons which they created(Http-DELETE-Request). Region/Polygon API endpoints let's you create a GeoJson polygon region(POST request), retrieve those regions/polygons which contains the specified/provided Coordinates/LatLng, update the region/polygon data, delete the regions/polygons.
+A django application showing the use of GeoJson data with django from scratch without the use of any third party geojson-libraries. This app has API endpoints for users and API endpoints for the regions/ polygons created by users. User API endpoints let's you create a user(Http-POST-Request), retrieve user details(Http-GET-Request), update/modify user details(Http-PUT-Request), delete user data along with the geojson regions/polygons which they created(Http-DELETE-Request). Region/Polygon API endpoints let's you create a GeoJson polygon region(POST request), retrieve those regions/polygons which contains the specified/provided Coordinates/LatLng, update the region/polygon data, delete the regions/polygons.
 
 
------------------------------------------------------HOW TO RUN--------------------------------------------------------------
+## HOW TO RUN
 
 NOTE: For Linux(ubuntu distros only)-- Tested on ElementaryOS
 
@@ -55,11 +55,11 @@ NOTE: For Linux(ubuntu distros only)-- Tested on ElementaryOS
 		--You can also access this server from any other system on the same Network
 
 
----------------------------------------------------HOW TO USE/ API Docs--------------------------------------------------------------
+## HOW TO USE/ API Docs
 
 NOTE: Sessions have not been implemented so APIs(wherever required) would use hardcoded login details i.e. User-email and Password for Authentication and Authorization purposes. 
 
-A. APIs for User/Service-Provider
+**A. APIs for User/Service-Provider**
 
 1. Creating a User/Service-Provider
 
@@ -86,7 +86,7 @@ A. APIs for User/Service-Provider
 
 
 
-B. APIs for Region/ GeoJson-Polygons
+**B. APIs for Region/ GeoJson-Polygons**
 
 1. Creating a Polygon for a given user by passing user email and password.
 
